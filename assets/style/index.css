@@ -45,6 +45,7 @@ body {
 
 .posts-container {
   width: 600px;
+  flex-direction: column;
 }
 
 h1, h2, p, li {
@@ -132,6 +133,23 @@ form {
   flex-direction: column;
   background-color: var(--secondary-backround);
 }
+
+.post-author {
+  align-items: center;
+}
+
+.new-post-header i, .new-post-header p {
+  color: #fff;
+}
+
+.created-post-container p {
+  width: 100%;
+}
+
+.created-post-container img {
+  width: 100%;
+}
+
 
 
 

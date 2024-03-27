@@ -15,7 +15,6 @@ const fileNameDisplay = utils.select('.file-name');
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Current User                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
 const pagesArray = [
   'Drake', 
   'Cristiano Ronaldo',
