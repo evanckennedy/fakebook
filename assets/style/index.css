@@ -30,6 +30,7 @@
   --app-background-dark: rgb(24, 23, 32);
   --secondary-backround: #272a31;
   --blue: #007bff;
+  --border-radius-5: 5px;
 }
 
 body {
@@ -40,6 +41,10 @@ body {
 .container {
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
+}
+
+.posts-container {
+  width: 600px;
 }
 
 h1, h2, p, li {
@@ -70,3 +75,49 @@ nav ul li {
   width: 125px;
 }
 
+.class-name {
+  color: white;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Create Post                                               */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+form {
+  background-color: var(--secondary-backround);
+  width: 600px;
+  border-radius: var(--border-radius-5);
+}
+
+.form-container {
+  padding: 15px;
+  flex-direction: column;
+}
+
+.form-container textarea {
+  resize: none;
+  height: 140px;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+}
+
+.file-input {
+  display: none;
+}
+
+.personalized-upload-field {
+  color: #fff;
+  /* line-height: 0; */
+}
+
+.personalized-upload-field i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.post-button {
+  color: #fff;
+  background-color: var(--blue);
+  border-radius: var(--border-radius-5);
+  padding: .5rem 1rem;
+}

@@ -7,7 +7,17 @@ import Subscriber from './Subscriber.js';
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Organizer                                            */
+/*  Selectors                                            */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+const fileInput = utils.select('.file-input');
+const fileNameDisplay = utils.select('.file-name');
 
-utils.print('Welcome');
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Create Post                                          */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+function printFileName(event) {
+  const fileName = event.target.files[0].name;
+  fileNameDisplay.textContent = `${fileName}`;
+}
+
+utils.listen('change', fileInput, printFileName);
