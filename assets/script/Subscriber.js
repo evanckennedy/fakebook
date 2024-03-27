@@ -12,9 +12,9 @@ class User {
   }
 
   get id() { return this.#id; }
-  get name() { return this.#id; }
-  get userName() { return this.#id; }
-  get email() { return this.#id; }
+  get name() { return this.#name; }
+  get userName() { return this.#userName; }
+  get email() { return this.#email; }
 
   getInfo() {
     return `${this.#name}, ${this.#userName}, ${this.#email}`;
@@ -38,7 +38,7 @@ class Subscriber extends User {
   get canMonetize() { return this.#canMonetize; }
 
   getInfo() {
-    return `${super.getInfo()}, ${this.#pages}, ${this.#groups}, ${this.#canMonetize}`
+    return `${super.getInfo()}, ${this.#pages}, ${this.#groups}, ${this.#canMonetize}`;
   }
 }
 

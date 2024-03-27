@@ -134,6 +134,10 @@ form {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Created Post                                          */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.created-posts {
+  flex-direction: column;
+}
+
 .created-post-container {
   width: 100%;
   border-radius: var(--border-radius-5);
@@ -156,6 +160,7 @@ form {
 
 .created-post-container img {
   width: 100%;
+  border-radius: var(--border-radius-5);
 }
 
 
