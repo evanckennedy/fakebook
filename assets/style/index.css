@@ -80,7 +80,7 @@ nav ul li {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* Create Post                                               */
+/* Create Post                                           */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 form {
   background-color: var(--secondary-backround);
@@ -121,3 +121,17 @@ form {
   border-radius: var(--border-radius-5);
   padding: .5rem 1rem;
 }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Created Post                                          */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.created-post-container {
+  width: 100%;
+  border-radius: var(--border-radius-5);
+  padding: 15px;
+  flex-direction: column;
+  background-color: var(--secondary-backround);
+}
+
+
+

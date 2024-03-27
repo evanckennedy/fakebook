@@ -30,7 +30,7 @@ class Subscriber extends User {
     super(id, name, userName, email);
     this.#pages = pages;
     this.#groups = groups;
-    this.#canMonetize = canMonetize
+    this.#canMonetize = canMonetize;
   }
 
   get pages() { return this.#pages; }
