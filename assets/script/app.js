@@ -66,7 +66,7 @@ function getDate() {
 }
 
 function getCurrentUserName () {
-  return currentUser.userName
+  return currentUser.userName;
 }
 
 function createPost() {
