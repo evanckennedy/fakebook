@@ -1,0 +1,70 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Utility Classes                                      */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Base                                                 */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+:root {
+  --app-background-dark: rgb(24, 23, 32);
+  --secondary-backround: #272a31;
+}
+
+body {
+  background-color: var(--app-background-dark);
+  font-family: 'Noto Sans', 'Open Sans', arial, sans-serif;
+}
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+h1, h2, p, li {
+  color: #fff;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Header                                                */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+header {
+  background-color: var(--secondary-backround);
+  height: 60px;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+nav ul li {
+  font-weight: 600;
+}
+
+.header-side, header nav {
+  line-height: 60px;
+}
+
+.header-side {
+  width: 125px;
+}
