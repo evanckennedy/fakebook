@@ -83,6 +83,10 @@ nav ul li {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Create Post                                           */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.create-post {
+  margin-top: 4rem;
+}
+
 form {
   background-color: var(--secondary-backround);
   width: 600px;
@@ -106,9 +110,13 @@ form {
   display: none;
 }
 
+.file-name {
+  font-size: 1.2rem;
+}
+
 .personalized-upload-field {
   color: #fff;
-  /* line-height: 0; */
+  align-items: center;
 }
 
 .personalized-upload-field i {
