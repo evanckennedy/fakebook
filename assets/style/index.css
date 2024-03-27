@@ -29,6 +29,7 @@
 :root {
   --app-background-dark: rgb(24, 23, 32);
   --secondary-backround: #272a31;
+  --blue: #007bff;
 }
 
 body {
@@ -68,3 +69,4 @@ nav ul li {
 .header-side {
   width: 125px;
 }
+
