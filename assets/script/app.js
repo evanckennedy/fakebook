@@ -73,19 +73,28 @@ function createPost() {
   let newPost = document.createElement('div');
   newPost.classList.add('created-post-container', 'flex', 'gap-1');
 
-  newPost.innerHTML = `
+  let postContent = `
   <div class="new-post-header flex space-between">
     <div class="post-author flex gap-1">
       <i class="fa-solid fa-user"></i>
       <p>${getCurrentUserName()}</p>
     </div>
-  <div>
-    <p>${getDate()}</p>
-  </div>
-  </div>
-  <p class="message-post">${getTextContent()}</p>
-  <img class="image-post" src="${getImage()}" alt"uploaded image">
-  `;
+    <div>
+      <p>${getDate()}</p>
+    </div>
+  </div>`;
+
+  const textContent = getTextContent();
+  if (textContent) {
+    postContent += `<p class="message-post">${textContent}</p>`;
+  }
+
+  if (fileInput.files.length > 0) {
+    const imageUrl = getImage();
+    postContent += `<img class="image-post" src="${imageUrl}" alt="uploaded image">`;
+  }
+
+  newPost.innerHTML = postContent;
 
   createdPostsContainer.prepend(newPost);
 
