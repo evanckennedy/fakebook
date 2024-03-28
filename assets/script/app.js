@@ -74,24 +74,6 @@ function setModal() {
   }
 }
 
-/* function setModal() {
-  modal.innerHTML = `
-  <div class="modal-header flex space-between">
-    <h2>User Info</h2>
-    <div class="close-modal">
-      <span>&times;</span>
-    </div>
-  </div>
-  <p>ID: ${currentUser.id}</p>
-  <p>Name: evan</p>
-  <p>Username: evan</p>
-  <p>Email: evan</p>
-  <p>Pages: evan</p>
-  <p>Groups: </p>
-  <p>Can Monetize: Yes</p>
-  `
-} */
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Create Post                                          */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
