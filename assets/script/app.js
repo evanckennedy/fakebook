@@ -157,5 +157,3 @@ utils.listen('click', user, () => {
 utils.listen('click', closeModal, () => {
   modal.close();
 });
-
-
