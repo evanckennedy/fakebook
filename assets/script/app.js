@@ -103,6 +103,13 @@ function getCurrentUserName () {
 }
 
 function createPost() {
+  const textContent = getTextContent();
+  const fileContent = fileInput.files.length > 0;
+   // If both text content and image are empty, do not create a post
+  if (!textContent && !fileContent) {
+    return;
+  }
+
   let newPost = document.createElement('div');
   newPost.classList.add('created-post-container', 'flex', 'gap-1');
 
@@ -117,12 +124,12 @@ function createPost() {
     </div>
   </div>`;
 
-  const textContent = getTextContent();
+  
   if (textContent) {
     postContent += `<p class="message-post">${textContent}</p>`;
   }
 
-  if (fileInput.files.length > 0) {
+  if (fileContent) {
     const imageUrl = getImage();
     postContent += `<img class="image-post" src="${imageUrl}" alt="uploaded image">`;
   }
