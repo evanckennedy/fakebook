@@ -30,6 +30,7 @@
   --app-background-dark: rgb(24, 23, 32);
   --secondary-backround: #272a31;
   --blue: #007bff;
+  --white: #f5f5f6;
   --border-radius-5: 5px;
 }
 
@@ -49,7 +50,7 @@ body {
 }
 
 h1, h2, p, li {
-  color: #fff;
+  color: var(--white);
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -76,8 +77,67 @@ nav ul li {
   width: 125px;
 }
 
+.header-side i {
+  color: var(--white);
+  font-size: 2rem;
+  transition: color 0.15s ease-in-out;
+}
+
+.header-side i:hover {
+  color: rgb(255 255 255 / 0.8);
+}
+
 .class-name {
-  color: white;
+  color: var(--white);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Modal                                                 */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+dialog {
+  padding: 1.5rem;
+  background-color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-5);
+  width: 275px;
+  outline: none;
+}
+
+dialog h2, dialog p {
+  color: var(--app-background-dark);
+}
+
+dialog h2 {
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.modal-header {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: inherit;
+  width: 3rem;
+  height: 3rem;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.close-modal:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.close-modal span {
+  color: var(--app-background-dark);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -103,7 +163,7 @@ form {
   height: 140px;
   width: 100%;
   background-color: transparent;
-  color: #fff;
+  color: var(--white);
 }
 
 .file-input {
@@ -115,7 +175,7 @@ form {
 }
 
 .personalized-upload-field {
-  color: #fff;
+  color: var(--white);
   align-items: center;
 }
 
@@ -125,7 +185,7 @@ form {
 }
 
 .post-button {
-  color: #fff;
+  color: var(--white);
   background-color: var(--blue);
   border-radius: var(--border-radius-5);
   padding: .5rem 1rem;
@@ -151,7 +211,7 @@ form {
 }
 
 .new-post-header i, .new-post-header p {
-  color: #fff;
+  color: var(--white);
 }
 
 .created-post-container p {

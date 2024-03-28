@@ -12,7 +12,10 @@ const fileInput = utils.select('.file-input');
 const fileNameDisplay = utils.select('.file-name');
 const postTextContent = utils.select('.form-container textarea');
 const createdPostsContainer = utils.select('.created-posts');
-const postButton = utils.select('.post-button')
+const postButton = utils.select('.post-button');
+const modal = utils.select('dialog');
+const user = utils.select('.header-side i');
+const closeModal = utils.select('.close-modal');
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Current User                                         */
@@ -40,6 +43,13 @@ const currentUser = new Subscriber(
   groupsArray, 
   true
 )
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Modal                                                */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+function createUserModal() {
+
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Create Post                                          */
@@ -112,3 +122,9 @@ function clearPostInput() {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 utils.listen('change', fileInput, printFileName);
 utils.listen('click', postButton, createPost);
+utils.listen('click', user, () => {
+  modal.showModal();
+})
+utils.listen('click', closeModal, () => {
+  modal.close();
+})
