@@ -16,40 +16,81 @@ const postButton = utils.select('.post-button');
 const modal = utils.select('dialog');
 const user = utils.select('.header-side i');
 const closeModal = utils.select('.close-modal');
+const userInfoContainer = utils.select('.user-info-container')
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Current User                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 const pagesArray = [
   'Drake', 
-  'Cristiano Ronaldo',
-  'Cheech and Chong', 
-  'Best Memes'
+  'Cristiano Ronaldo'
 ];
 
 const groupsArray = [
   'Rant HQ',
-  'Cheap Meal Ideas', 
-  'Girls LOVE Travel', 
-  'Engineering Discoveries'
+  'Cheap Meals', 
 ];
 
 const currentUser = new Subscriber(
   'ida534h3',
   'Evan Kennedy',
   'evanck21',
-  'evanckennedy@protonmail.com',
+  'evanck@email.com',
   pagesArray, 
   groupsArray, 
   true
-)
+);
+
+function getUserInfo() {
+  const info = currentUser.getInfo().split(', ');
+  const [name, username, email, pages, groups, monetize] = info;
+  const fixedPages = pages.split(',').join(', ');
+  const fixedGroups = groups.split(',').join(', ');
+  const fixedMonetize = monetize ? 'Yes' : 'No';
+  return { 
+    Name: name, 
+    Username: username, 
+    Email: email, 
+    Pages: fixedPages, 
+    Groups: fixedGroups, 
+    Monetized: fixedMonetize
+  };
+}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Modal                                                */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-function createUserModal() {
+function setModal() {
+  let userInfoObj = getUserInfo();
+  let infoKeys = Object.keys(userInfoObj);
 
+  userInfoContainer.innerHTML = '';
+
+  for (let key of infoKeys) {
+    const p = document.createElement('p');
+    p.textContent = `${key}: ${userInfoObj[key]}`;
+    userInfoContainer.appendChild(p);
+  }
 }
+
+/* function setModal() {
+  modal.innerHTML = `
+  <div class="modal-header flex space-between">
+    <h2>User Info</h2>
+    <div class="close-modal">
+      <span>&times;</span>
+    </div>
+  </div>
+  <p>ID: ${currentUser.id}</p>
+  <p>Name: evan</p>
+  <p>Username: evan</p>
+  <p>Email: evan</p>
+  <p>Pages: evan</p>
+  <p>Groups: </p>
+  <p>Can Monetize: Yes</p>
+  `
+} */
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Create Post                                          */
@@ -123,8 +164,11 @@ function clearPostInput() {
 utils.listen('change', fileInput, printFileName);
 utils.listen('click', postButton, createPost);
 utils.listen('click', user, () => {
+  setModal();
   modal.showModal();
 })
 utils.listen('click', closeModal, () => {
   modal.close();
-})
+});
+
+
