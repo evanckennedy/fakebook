@@ -97,8 +97,8 @@ function getDate() {
   return currentDate;
 }
 
-function getCurrentUserName () {
-  return currentUser.userName;
+function getCurrentName() {
+  return currentUser.name;
 }
 
 function createPost() {
@@ -116,7 +116,7 @@ function createPost() {
   <div class="new-post-header flex space-between">
     <div class="post-author flex gap-1">
       <i class="fa-solid fa-user"></i>
-      <p>${getCurrentUserName()}</p>
+      <p>${getCurrentName()}</p>
     </div>
     <div>
       <p>${getDate()}</p>
