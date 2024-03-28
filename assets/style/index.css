@@ -106,7 +106,7 @@ dialog {
   background-color: var(--white);
   border: none;
   border-radius: var(--border-radius-5);
-  width: 30rem;
+  width: 27.5rem;
   outline: none;
   position: fixed;
   top: 50%;
