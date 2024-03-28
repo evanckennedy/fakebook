@@ -28,7 +28,7 @@
 :root {
   --app-background-dark: rgb(24, 23, 32);
   --secondary-backround: #272a31;
-  --blue: #007bff;
+  --blue: #2993ff;
   --white: #f5f5f6;
   --border-radius-5: 5px;
 }
@@ -48,7 +48,7 @@ body {
   flex-direction: column;
 }
 
-h1, h2, p, li {
+h2, p, li {
   color: var(--white);
 }
 
@@ -62,6 +62,7 @@ header {
 
 h1 {
   font-size: 2.4rem;
+  color: var(--blue);
 }
 
 nav ul li {
@@ -84,7 +85,7 @@ nav ul li {
 }
 
 .header-side i:hover {
-  color: rgb(255 255 255 / 0.8);
+  color: rgb(255 255 255 / 0.9);
 }
 
 .class-name {
@@ -200,6 +201,11 @@ form {
 .personalized-upload-field i {
   font-size: 3.5rem;
   cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+.personalized-upload-field i:hover {
+  color: rgb(255 255 255 / 0.9);
 }
 
 .post-button {
@@ -209,6 +215,11 @@ form {
   padding: 0 1.5rem;
   height: 100%;
   font-weight: 500;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.post-button:hover {
+  background-color: #3f9dfceb;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */

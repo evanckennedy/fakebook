@@ -16,7 +16,7 @@ const postButton = utils.select('.post-button');
 const modal = utils.select('dialog');
 const user = utils.select('.header-side i');
 const closeModal = utils.select('.close-modal');
-const userInfoContainer = utils.select('.user-info-container')
+const userInfoContainer = utils.select('.user-info-container');
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Current User                                         */
@@ -76,7 +76,6 @@ function setModal() {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Create Post                                          */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* Shows the file name the user selected */
 function printFileName(event) {
   const fileName = event.target.files[0].name;
   fileNameDisplay.textContent = `${fileName}`;
@@ -101,11 +100,21 @@ function getCurrentName() {
   return currentUser.name;
 }
 
+function isPostContentEmpty(textContent, fileContent) {
+  return !textContent && !fileContent;
+}
+
+function clearPostInput() {
+  postTextContent.value = '';
+  fileInput.value = '';
+  fileNameDisplay.textContent = '';
+}
+
 function createPost() {
   const textContent = getTextContent();
   const fileContent = fileInput.files.length > 0;
-   // If both text content and image are empty, do not create a post
-  if (!textContent && !fileContent) {
+
+  if (isPostContentEmpty(textContent, fileContent)) {
     return;
   }
 
@@ -137,12 +146,6 @@ function createPost() {
   createdPostsContainer.prepend(newPost);
 
   clearPostInput();
-}
-
-function clearPostInput() {
-  postTextContent.value = '';
-  fileInput.value = '';
-  fileNameDisplay.textContent = '';
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
