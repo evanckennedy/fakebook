@@ -57,7 +57,6 @@ function getUserInfo() {
   };
 }
 
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Modal                                                */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -123,7 +122,6 @@ function createPost() {
       <p>${getDate()}</p>
     </div>
   </div>`;
-
   
   if (textContent) {
     postContent += `<p class="message-post">${textContent}</p>`;
