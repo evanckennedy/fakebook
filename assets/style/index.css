@@ -230,8 +230,8 @@ form {
   align-items: center;
 }
 
-.new-post-header i, .new-post-header p {
-  color: var(--white);
+.new-post-header p, .post-author i{
+  color: rgb(255 255 255 / 0.5);
 }
 
 .created-post-container p {
